@@ -1,6 +1,7 @@
 <?php
 
 use App\Providers\RouteServiceProvider;
+use App\Providers\TenancyServiceProvider;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -18,6 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withProviders([
-        RouteServiceProvider::class
+        RouteServiceProvider::class,
+        TenancyServiceProvider::class
     ])
     ->create();
